@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = Faces;
+	cell = PSLinkCell;
+	detail = FacesListController;
+	icon = Faces.png;
+	isController = 1;
+	label = Faces;
+    };
+}

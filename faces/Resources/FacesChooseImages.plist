@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerCellClass</key>
+			<string>FacesChooseImagesCustomCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button One</string>
+			<key>action</key>
+			<string>buttonOne</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Two</string>
+			<key>action</key>
+			<string>buttonTwo</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Three</string>
+			<key>action</key>
+			<string>buttonThree</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Four</string>
+			<key>action</key>
+			<string>buttonFour</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Five</string>
+			<key>action</key>
+			<string>buttonFive</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Six</string>
+			<key>action</key>
+			<string>buttonSix</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Seven</string>
+			<key>action</key>
+			<string>buttonSeven</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Eight</string>
+			<key>action</key>
+			<string>buttonEight</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Nine</string>
+			<key>action</key>
+			<string>buttonNine</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Passcode Button Zero</string>
+			<key>action</key>
+			<string>buttonZero</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+         	<key>cell</key>
+            <string>PSSliderCell</string>
+            <key>cellClass</key>
+			<string>FacesSliderCell</string>
+			<key>default</key>
+            <real>0.5</real>
+            <key>defaults</key>
+            <string>org.benrosen.facesprefs</string>
+            <key>min</key>
+			<real>0</real>
+ 			<key>max</key>
+			<real>1</real>
+			<key>showValue</key>
+			<true/>
+			<key>key</key>
+			<string>opacity</string>
+			<key>leftImage</key>
+			<string>opacityIcon.png</string>
+			<key>id</key>
+			<string>opacity</string>
+			<key>label</key>
+			<string>Opacity</string>
+         </dict>		
+	</array>
+	<key>title</key>
+	<string>Choose Images</string>
+</dict>
+</plist>

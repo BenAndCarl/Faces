@@ -1,0 +1,9 @@
+Package: org.benrosen.faces
+Name: Faces
+Depends: mobilesubstrate
+Version: 0.0.2
+Architecture: iphoneos-arm
+Description: Add images to the passcode buttons.
+Maintainer: Ben Rosen & CP Digital Darkroom
+Author: Ben Rosen & CP Digital Darkroom
+Section: Tweaks
