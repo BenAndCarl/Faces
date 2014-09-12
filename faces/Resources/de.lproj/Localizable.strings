@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CANCEL</key>
+	   <string>Abbrechen</string>
+
+	<key>CHOOSE_IMAGES</key>
+	   <string>Lege die Bilder fest</string>
+
+	<key>CHOOSE_PHOTO</key>
+	   <string>Aus Photoalbum auswählen</string>
+
+	<key>CONTACT_THE_DEVELOPERS</key>
+	   <string>Kontaktiere die Entwickler</string>
+
+	<key>CREDITS</key>
+	   <string>Danksagung</string>
+
+	<key>DELETE_PHOTO</key>
+	   <string>Bild löschen</string>
+
+	<key>DONATE</key>
+	   <string>Spenden</string>
+
+	<key>DONATE_MESSAGE</key>
+	   <string>Wir haben viel Arbeit in diese Erweiterung gesteckt und hoffen euch weiterhin neue, aufregende Erweiterungen bringen zu können.</string>
+
+	<key>DISMISS</key>
+	   <string>Schliessen</string>
+
+	<key>ENABLED</key>
+	   <string>Aktiviert</string>
+
+	<key>NO_IMAGE_CURRENTLY_SAVED</key>
+	   <string>Du hast für diese Ziffer kein Bild gespeichert.</string>
+
+	<key>OPACITY</key>
+		<string>Deckkraft</string>
+
+	<key>PASSCODE_BUTTON_ONE</key>
+	   <string>PIN Taste Eins</string>
+
+	<key>PASSCODE_BUTTON_TWO</key>
+	   <string>PIN Taste Zwei</string>
+
+	<key>PASSCODE_BUTTON_THREE</key>
+	   <string>PIN Taste Drei</string>
+
+	<key>PASSCODE_BUTTON_FOUR</key>
+	   <string>PIN Taste Vier</string>
+
+	<key>PASSCODE_BUTTON_FIVE</key>
+	   <string>PIN Taste Fünf</string>
+
+	<key>PASSCODE_BUTTON_SIX</key>
+	   <string>PIN Taste Sechs</string>
+
+	<key>PASSCODE_BUTTON_SEVEN</key>
+	   <string>PIN Taste Sieben</string>
+
+	<key>PASSCODE_BUTTON_EIGHT</key>
+	   <string>PIN Taste Acht</string>
+
+	<key>PASSCODE_BUTTON_NINE</key>
+	   <string>PIN Taste Neun</string>
+
+	<key>PASSCODE_BUTTON_ZERO</key>
+	   <string>PIN Taste Null</string>
+	   
+	<key>RESPRING</key>
+		<string>Respring</string>
+
+	<key>RESPRING_MESSAGE</key>
+		<string>Leider musst du respringen, um den Status der Erweiterung oder die Deckkraft der Bilder zu ändern. Dies wird vielleicht später behoben.</string>
+
+	<key>SELECT_IMAGES_FOR_BUTTONS</key>
+	   <string>Wähle die Bilder für die Tasten</string>
+
+	<key>SUPPORT</key>
+	   <string>Support</string>
+
+    <key>TAKE_OR_CHOOSE</key>
+       <string>Willst du ein Bild aufnehmen oder aus einem Album auswählen?</string>
+
+	<key>TAKE_PHOTO</key>
+	   <string>Ein Bild aufnehmen</string>
+</dict>
+</plist>
