@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CANCEL</key>
+	   <string>Cancelar</string>
+
+	<key>CHOOSE_IMAGES</key>
+	   <string>Elija Imágenes</string>
+
+	<key>CHOOSE_PHOTO</key>
+	   <string>Elija una foto existente</string>
+
+	<key>CONTACT_THE_DEVELOPERS</key>
+	   <string>Contacta a los Desarrolladores</string>
+
+	<key>CREDITS</key>
+	   <string>Creditos</string>
+
+	<key>DELETE_PHOTO</key>
+	   <string>Borrar imagen existente</string>
+
+	<key>DONATE</key>
+	   <string>Donar</string>
+
+	<key>DONATE_MESSAGE</key>
+	   <string>Hemos puesto mucho trabajo en este tweak y esperamos poder continuar trayéndole nuevos ajustes emocionantes en el futuro.</string>
+
+	<key>DISMISS</key>
+	   <string>Descartar</string>
+
+	<key>ENABLED</key>
+	   <string>Activar</string>
+
+	<key>NO_IMAGE_CURRENTLY_SAVED</key>
+	   <string>Usted actualmente no tiene una imagen guardada para este botón.</string>
+
+	<key>PASSCODE_BUTTON_ONE</key>
+	   <string>Botón de código Uno</string>
+
+	<key>PASSCODE_BUTTON_TWO</key>
+	   <string>Botón de código Dos</string>
+
+	<key>PASSCODE_BUTTON_THREE</key>
+	   <string>Botón de código Tres</string>
+
+	<key>PASSCODE_BUTTON_FOUR</key>
+	   <string>Botón de código Cuatro</string>
+
+	<key>PASSCODE_BUTTON_FIVE</key>
+	   <string>Botón de código Cinco</string>
+
+	<key>PASSCODE_BUTTON_SIX</key>
+	   <string>Botón de código Seis</string>
+
+	<key>PASSCODE_BUTTON_SEVEN</key>
+	   <string>Botón de código Siete</string>
+
+	<key>PASSCODE_BUTTON_EIGHT</key>
+	   <string>Botón de código Ocho</string>
+
+	<key>PASSCODE_BUTTON_NINE</key>
+	   <string>Botón de código Nueve</string>
+
+	<key>PASSCODE_BUTTON_ZERO</key>
+	   <string>Botón de código Cero</string>
+
+	<key>RESPRING</key>
+		<string>Reiniciar SpringBoard</string>
+
+	<key>RESPRING_MESSAGE</key>
+		<string>Desafortunadamente, usted necesita reiniciar SpringBoard cuando active/desactive el tweak o cuando se cambia la opacidad de las imágenes. Esto puede ser fijado en una futura actualización.</string>
+
+	<key>SELECT_IMAGES_FOR_BUTTONS</key>
+	   <string>Seleccione imágenes para los botones</string>
+
+	<key>SUPPORT</key>
+	   <string>Soporte</string>
+
+    <key>TAKE_OR_CHOOSE</key>
+       <string>¿Quieres tomar una foto o elegir una foto existente?</string>
+
+	<key>TAKE_PHOTO</key>
+	   <string>Tomar una foto</string>
+</dict>
+</plist>

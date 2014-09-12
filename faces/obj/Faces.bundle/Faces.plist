@@ -26,7 +26,7 @@
 			<key>key</key>
 			<string>enabled</string>
 			<key>label</key>
-			<string>Enabled</string>
+			<string>ENABLED</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -38,7 +38,7 @@
 			<key>detail</key>
 			<string>FacesChooseImagesListController</string>
 			<key>label</key>
-			<string>Choose Images</string>
+			<string>CHOOSE_IMAGES</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -50,7 +50,19 @@
 			<key>detail</key>
 			<string>FacesSupportListController</string>
 			<key>label</key>
-			<string>Support</string>
+			<string>SUPPORT</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>detail</key>
+			<string>FacesDonateListController</string>
+			<key>label</key>
+			<string>DONATE</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -60,7 +72,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Credits</string>
+			<string>CREDITS</string>
 			<key>action</key>
 			<string>showCredits</string>
 		</dict>
@@ -72,7 +84,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Respring</string>
+			<string>RESPRING</string>
 			<key>action</key>
 			<string>respring</string>
 		</dict>
@@ -82,7 +94,7 @@
 			<key>footerAlignment</key>
 			<integer>1</integer>
 			<key>footerText</key>
-			<string>Unfortunatly, you need to respring when you change the enable/disable tweak or when you change the opacity of the images. This may be fixed in a future update.</string>
+			<string>RESPRING_MESSAGE</string>
 		</dict>
 		<dict>
 			<key>cell</key>

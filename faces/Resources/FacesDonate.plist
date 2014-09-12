@@ -8,50 +8,46 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerCellClass</key>
-			<string>FacesSupportCustomCell</string>
+			<string>FacesDonateCustomCell</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Donate to Ben Rosen</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>@benrosen0 on Twitter</string>
+			<string>Donate via PayPal</string>
 			<key>action</key>
-			<string>openBenTwitter</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>label</key>
-			<string>@CPDigiDarkroom on Twitter</string>
-			<key>action</key>
-			<string>openCarlosTwitter</string>
+			<string>paypalDonateBR</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Donate to CP Digital Darkroom</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Email Ben Rosen</string>
+			<string>Donate Via PayPal</string>
 			<key>action</key>
-			<string>emailBR</string>
+			<string>paypalDonateCP</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Email CP Digital Darkroom</string>
+			<string>Donate via Bitcoin</string>
 			<key>action</key>
-			<string>emailCP</string>
+			<string>bitcoinDonateCP</string>
 		</dict>
 	</array>
 	<key>title</key>
-	<string>Support</string>
+	<string>Donate</string>
 </dict>
 </plist>

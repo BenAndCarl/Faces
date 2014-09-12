@@ -18,7 +18,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button One</string>
+			<string>PASSCODE_BUTTON_ONE</string>
 			<key>action</key>
 			<string>buttonOne</string>
 		</dict>
@@ -30,7 +30,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Two</string>
+			<string>PASSCODE_BUTTON_TWO</string>
 			<key>action</key>
 			<string>buttonTwo</string>
 		</dict>
@@ -42,7 +42,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Three</string>
+			<string>PASSCODE_BUTTON_THREE</string>
 			<key>action</key>
 			<string>buttonThree</string>
 		</dict>
@@ -54,7 +54,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Four</string>
+			<string>PASSCODE_BUTTON_FOUR</string>
 			<key>action</key>
 			<string>buttonFour</string>
 		</dict>
@@ -66,7 +66,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Five</string>
+			<string>PASSCODE_BUTTON_FIVE</string>
 			<key>action</key>
 			<string>buttonFive</string>
 		</dict>
@@ -78,7 +78,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Six</string>
+			<string>PASSCODE_BUTTON_SIX</string>
 			<key>action</key>
 			<string>buttonSix</string>
 		</dict>
@@ -90,7 +90,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Seven</string>
+			<string>PASSCODE_BUTTON_SEVEN</string>
 			<key>action</key>
 			<string>buttonSeven</string>
 		</dict>
@@ -102,7 +102,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Eight</string>
+			<string>PASSCODE_BUTTON_EIGHT</string>
 			<key>action</key>
 			<string>buttonEight</string>
 		</dict>
@@ -114,7 +114,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Nine</string>
+			<string>PASSCODE_BUTTON_NINE</string>
 			<key>action</key>
 			<string>buttonNine</string>
 		</dict>
@@ -126,7 +126,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Passcode Button Zero</string>
+			<string>PASSCODE_BUTTON_ZERO</string>
 			<key>action</key>
 			<string>buttonZero</string>
 		</dict>
@@ -160,6 +160,6 @@
          </dict>		
 	</array>
 	<key>title</key>
-	<string>Choose Images</string>
+	<string>CHOOSE_IMAGES</string>
 </dict>
 </plist>

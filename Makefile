@@ -13,6 +13,6 @@ Faces_PRIVATE_FRAMEWORKS = SpringBoardUIServices TelephonyUI
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
-	install.exec "killall -9 SpringBoard"
+	install.exec "killall -9 Preferences"
 SUBPROJECTS += faces
 include $(THEOS_MAKE_PATH)/aggregate.mk

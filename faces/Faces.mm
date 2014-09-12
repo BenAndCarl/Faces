@@ -4,6 +4,21 @@
 #import <Twitter/TWTweetComposeViewController.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
+#define LOCALIZED_ALERT_MESSAGE [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"TAKE_OR_CHOOSE" value:@"Do you want to take a photo or choose an existing photo?" table:@"Localizable"]
+#define LOCALIZED_CANCEL [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"CANCEL" value:@"Cancel" table:@"Localizable"]
+#define LOCALIZED_TAKE_PHOTO [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"TAKE_PHOTO" value:@"Take a photo" table:@"Localizable"]
+#define LOCALIZED_CHOOSE_PHOTO [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"CHOOSE_PHOTO" value:@"Choose an existing photo" table:@"Localizable"]
+#define LOCALIZED_DELETE_PHOTO [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"DELETE_PHOTO" value:@"Delete existing image" table:@"Localizable"]
+#define LOCALIZED_DISMISS [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"DISMISS" value:@"Dismiss" table:@"Localizable"]
+#define LOCALIZED_NO_IMAGE_MESSAGE [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"NO_IMAGE_CURRENTLY_SAVED" value:@"You currently don't have an image saved for this button." table:@"Localizable"]
+#define LOCALIZED_CHOOSE_IMAGES [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"CHOOSE_IMAGES" value:@"Choose Images" table:@"Localizable"]
+#define LOCALIZED_SELECT_IMAGES_FOR_BUTTONS [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"SELECT_IMAGES_FOR_BUTTONS" value:@"Select the images for the buttons" table:@"Localizable"]
+#define LOCALIZED_DONATE [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"DONATE" value:@"Donate" table:@"Localizable"]
+#define LOCALIZED_DONATE_MESSAGE [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"DONATE_MESSAGE" value:@"We've put a lot of work into this tweak and hope to be able to continue bringing you new exciting tweaks in the future." table:@"Localizable"]
+#define LOCALIZED_SUPPORT [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"SUPPORT" value:@"Support" table:@"Localizable"]
+#define LOCALIZED_CONTACT_THE_DEVELOPERS [[NSBundle bundleWithPath:@"/Library/PreferenceBundles/Faces.bundle"] localizedStringForKey:@"CONTACT_THE_DEVELOPERS" value:@"Contact the Developers" table:@"Localizable"]
+
+
 @interface PSTableCell (Faces)
 @property (nonatomic, retain) UIView *backgroundView;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier specifier:(PSSpecifier *)specifier;
@@ -140,7 +155,7 @@
 
         devName1 = [[UILabel alloc] initWithFrame:botFrame];
         [devName1 setNumberOfLines:1];
-        devName1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:20];
+        devName1.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20];
         [devName1 setText:@"Ben Rosen"];
         [devName1 setBackgroundColor:[UIColor clearColor]];
         devName1.textColor = [UIColor grayColor];
@@ -148,7 +163,7 @@
 
         devName2 = [[UILabel alloc] initWithFrame:randFrame];
         [devName2 setNumberOfLines:1];
-        devName2.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:20];
+        devName2.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20];
         [devName2 setText:@"CP Digital Darkroom"];
         [devName2 setBackgroundColor:[UIColor clearColor]];
         devName2.textColor = [UIColor grayColor];
@@ -191,8 +206,13 @@
         _specifiers = [[self loadSpecifiersFromPlistName:@"FacesChooseImages" target:self] retain];
     }
     [self localizedSpecifiersWithSpecifiers:_specifiers];
+    [self setTitle:LOCALIZED_CHOOSE_IMAGES];
 
     return _specifiers;
+}
+
+- (id)navigationTitle {
+    return [[self bundle] localizedStringForKey:[super title] value:[super title] table:nil];
 }
 
 - (id)localizedSpecifiersWithSpecifiers:(NSArray *)specifiers {
@@ -252,78 +272,88 @@ int buttonNumber;
 
 - (void)buttonOne {
     buttonNumber = 1;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 1;
     [askImageType show];
     [askImageType release];
 }
 
 - (void)buttonTwo {
     buttonNumber = 2;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 2;
     [askImageType show];
     [askImageType release];
 }
 
 - (void)buttonThree {
     buttonNumber = 3;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 3;
     [askImageType show];
     [askImageType release];
 }
 
 - (void)buttonFour {
     buttonNumber = 4;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 4;
     [askImageType show];
     [askImageType release];    
 }
 
 - (void)buttonFive {
     buttonNumber = 5;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 5;
     [askImageType show];
     [askImageType release];    
 }
 
 - (void)buttonSix {
     buttonNumber = 6;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces"message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 6;
     [askImageType show];
     [askImageType release];    
 }
 
 - (void)buttonSeven {
     buttonNumber = 7;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 7;
     [askImageType show];
     [askImageType release];    
 }
 
 - (void)buttonEight {
     buttonNumber = 8;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 8;
     [askImageType show];
     [askImageType release];    
 }
 
 - (void)buttonNine {
     buttonNumber = 9;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 9;
     [askImageType show];
     [askImageType release];    
 }
 
 - (void)buttonZero {
     buttonNumber = 11;
-    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message: @"Do you want to take a photo or choose an existing photo?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles:@"Take a photo", @"Choose an existing photo.", nil];
+    UIAlertView *askImageType = [[UIAlertView alloc] initWithTitle:@"Faces" message:LOCALIZED_ALERT_MESSAGE delegate: self cancelButtonTitle:LOCALIZED_CANCEL otherButtonTitles:LOCALIZED_TAKE_PHOTO, LOCALIZED_CHOOSE_PHOTO, LOCALIZED_DELETE_PHOTO, nil];
+    askImageType.tag = 11;
     [askImageType show];
     [askImageType release];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.allowsEditing = YES;
-    imagePicker.delegate = self;
+        imagePicker.allowsEditing = YES;
+        imagePicker.delegate = self;
 
     if (buttonIndex == 1) {
         NSLog(@"[Faces] Take a photo.");
@@ -331,8 +361,148 @@ int buttonNumber;
     } else if (buttonIndex == 2) {
         NSLog(@"[Faces] Choose a photo from photo library.");
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    } else if (buttonIndex == 3 && alertView.tag == 1) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture1.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }
+    } else if (buttonIndex == 3 && alertView.tag == 2) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture2.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }
+    } else if (buttonIndex == 3 && alertView.tag == 3) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture3.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }
+    } else if (buttonIndex == 3 && alertView.tag == 4) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture4.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }  
+    } else if (buttonIndex == 3 && alertView.tag == 5) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture5.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }
+    } else if (buttonIndex == 3 && alertView.tag == 6) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture6.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }
+    } else if (buttonIndex == 3 && alertView.tag == 7) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture7.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }   
+    } else if (buttonIndex == 3 && alertView.tag == 8) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture8.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }
+    } else if (buttonIndex == 3 && alertView.tag == 9) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture9.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        } 
+    } else if (buttonIndex == 3 && alertView.tag == 11) {
+        NSError *error = nil;
+        NSString *sbPath = @"/var/mobile/Library/Faces/picture11.png";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:sbPath]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Faces" 
+                                                            message:LOCALIZED_NO_IMAGE_MESSAGE
+                                                           delegate:nil 
+                                                  cancelButtonTitle:LOCALIZED_DISMISS
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:sbPath error:&error];
+        }    
     }
-    if (buttonIndex != 0) {
+    if (buttonIndex == 1 || buttonIndex == 2) {
     [self.navigationController presentViewController:imagePicker animated:YES completion: nil];
     [imagePicker release];
 } else {
@@ -381,7 +551,7 @@ int buttonNumber;
             llLbl = [[UILabel alloc] initWithFrame:frame];
             [llLbl setNumberOfLines:1];
             llLbl.font = [UIFont fontWithName:@"HelveticaNeue-Ultralight" size:40];
-            [llLbl setText:@"Choose Images"];
+            [llLbl setText:LOCALIZED_CHOOSE_IMAGES];
             [llLbl setBackgroundColor:[UIColor clearColor]];
             llLbl.textColor = [UIColor blackColor];
             llLbl.textAlignment = NSTextAlignmentCenter;
@@ -389,7 +559,7 @@ int buttonNumber;
             dLbl = [[UILabel alloc] initWithFrame:botFrame];
             [dLbl setNumberOfLines:1];
             dLbl.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:20];
-            [dLbl setText:@"Select the images for the buttons."];
+            [dLbl setText:LOCALIZED_SELECT_IMAGES_FOR_BUTTONS];
             [dLbl setBackgroundColor:[UIColor clearColor]];
             dLbl.textColor = [UIColor grayColor];
             dLbl.textAlignment = NSTextAlignmentCenter;
@@ -504,6 +674,7 @@ int buttonNumber;
 - (void)openBenTwitter;
 - (void)openCarlosTwitter;
 - (void)emailBR;
+- (void)emailCP;
 
 @end
 
@@ -514,8 +685,13 @@ int buttonNumber;
         _specifiers = [[self loadSpecifiersFromPlistName:@"FacesSupport" target:self] retain];
     }
     [self localizedSpecifiersWithSpecifiers:_specifiers];
+    [self setTitle:LOCALIZED_SUPPORT];
 
     return _specifiers;
+}
+
+- (id)navigationTitle {
+    return [[self bundle] localizedStringForKey:[super title] value:[super title] table:nil];
 }
 
 - (id)localizedSpecifiersWithSpecifiers:(NSArray *)specifiers {
@@ -625,9 +801,171 @@ int buttonNumber;
     [emailBen release];
 }
 
+- (void)emailCP {
+    MFMailComposeViewController *emailCP = [[MFMailComposeViewController alloc] init];
+    [emailCP setSubject:@"Faces Support"];
+    [emailCP setToRecipients:[NSArray arrayWithObjects:@"benrosen78@gmail.com", nil]];
+    [emailCP addAttachmentData:[NSData dataWithContentsOfFile:@"/var/mobile//Library/Preferences/org.benrosen.facesprefs.plist"] mimeType:@"application/xml" fileName:@"Prefs.plist"];
+    system("/usr/bin/dpkg -l >/tmp/dpkgl.log");
+    [emailCP addAttachmentData:[NSData dataWithContentsOfFile:@"/tmp/dpkgl.log"] mimeType:@"text/plain" fileName:@"dpkgl.txt"];
+    [self.navigationController presentViewController:emailCP animated:YES completion:nil];
+    emailCP.mailComposeDelegate = self;
+    [emailCP release];
+}
+
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
     [self dismissViewControllerAnimated: YES completion: nil];
 }
+
+@end
+
+@interface FacesDonateListController : PSListController <MFMailComposeViewControllerDelegate>
+
+- (void)bitcoinDonateCP;
+- (void)paypalDonateCP;
+
+@end
+
+@implementation FacesDonateListController
+
+- (id)specifiers {
+    if(_specifiers == nil) {
+        _specifiers = [[self loadSpecifiersFromPlistName:@"FacesDonate" target:self] retain];
+    }
+    [self localizedSpecifiersWithSpecifiers:_specifiers];
+    [self setTitle:LOCALIZED_DONATE];
+
+    return _specifiers;
+}
+
+- (id)navigationTitle {
+    return [[self bundle] localizedStringForKey:[super title] value:[super title] table:nil];
+}
+
+- (id)localizedSpecifiersWithSpecifiers:(NSArray *)specifiers {
+    
+    NSLog(@"localizedSpecifiersWithSpecifiers");
+    for(PSSpecifier *curSpec in specifiers) {
+        NSString *name = [curSpec name];
+        if(name) {
+            [curSpec setName:[[self bundle] localizedStringForKey:name value:name table:nil]];
+        }
+        NSString *footerText = [curSpec propertyForKey:@"footerText"];
+        if(footerText)
+            [curSpec setProperty:[[self bundle] localizedStringForKey:footerText value:footerText table:nil] forKey:@"footerText"];
+        id titleDict = [curSpec titleDictionary];
+        if(titleDict) {
+            NSMutableDictionary *newTitles = [[NSMutableDictionary alloc] init];
+            for(NSString *key in titleDict) {
+                NSString *value = [titleDict objectForKey:key];
+                [newTitles setObject:[[self bundle] localizedStringForKey:value value:value table:nil] forKey: key];
+            }
+            [curSpec setTitleDictionary:newTitles];
+        }
+    }
+    return specifiers;
+}
+
+- (void)loadView {
+    [super loadView];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(tweetSP:)];
+    [UISwitch appearanceWhenContainedIn:self.class, nil].onTintColor = [UIColor grayColor];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.view.tintColor = [UIColor grayColor];
+    self.navigationController.navigationBar.tintColor = [UIColor grayColor];
+    [UISwitch appearanceWhenContainedIn:self.class, nil].onTintColor = [UIColor grayColor];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    self.view.tintColor = nil;
+    self.navigationController.navigationBar.tintColor = nil;
+
+}
+- (void)tweetSP:(id)sender {
+    TWTweetComposeViewController *tweetController = [[TWTweetComposeViewController alloc] init];
+    [tweetController setInitialText:@"Just got the tweak #Faces, by @benrosen0 and @CPDigiDarkroom! I love it!"];
+    [tweetController addImage:[UIImage imageWithContentsOfFile:@"/var/mobile/Library/Faces/mockup.png"]];
+    [self.navigationController presentViewController:tweetController animated:YES completion:nil];
+    [tweetController release];
+}
+
+- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2 {
+        PSTableCell *cell = [super tableView:arg1 cellForRowAtIndexPath:arg2];
+
+        ((UILabel *)cell.titleLabel).textColor = [UIColor grayColor];
+
+    return cell;
+}
+-(void)paypalDonateBR{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=benr783%40me%2ecom&lc=US&item_name=Ben%20Rosen%20Faces%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest"]];
+}
+
+-(void)bitcoinDonateCP {
+    UIPasteboard *bitcoinAddress = [UIPasteboard generalPasteboard];
+    bitcoinAddress.string = @"1NrPP39MYFwxPnhQfLH413DQ7bLF6x18r7";
+    UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"Copy Complete" message:@"Bitcoin Address has been copied to the clipboard." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alertView show];
+}
+
+-(void)paypalDonateCP{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NYKZTNTPQ3DBN"]];
+}
+
+@end
+
+@interface FacesDonateCustomCell : PSTableCell {
+    UILabel *llLbl;
+    UILabel *dLbl;
+}
+
+@end
+
+@implementation FacesDonateCustomCell
+
+- (id)initWithSpecifier:(PSSpecifier *)specifier
+{
+        self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell" specifier:specifier];
+        if (self) {
+
+            int width = [[UIScreen mainScreen] bounds].size.width;
+            CGRect frame = CGRectMake(0, -15, width, 60);
+            CGRect botFrame = CGRectMake(20, 35, (width - 40), 100);
+
+            llLbl = [[UILabel alloc] initWithFrame:frame];
+            [llLbl setNumberOfLines:1];
+            llLbl.font = [UIFont fontWithName:@"HelveticaNeue-Ultralight" size:40];
+            [llLbl setText:LOCALIZED_DONATE];
+            [llLbl setBackgroundColor:[UIColor clearColor]];
+            llLbl.textColor = [UIColor blackColor];
+            llLbl.textAlignment = NSTextAlignmentCenter;
+
+            dLbl = [[UILabel alloc] initWithFrame:botFrame];
+            [dLbl setNumberOfLines:4];
+            dLbl.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17];
+            [dLbl setText:LOCALIZED_DONATE_MESSAGE];
+            [dLbl setBackgroundColor:[UIColor clearColor]];
+            dLbl.textColor = [UIColor grayColor];
+            dLbl.textAlignment = NSTextAlignmentCenter;
+
+            [self addSubview:llLbl];
+            [self addSubview:dLbl];
+            [llLbl release];
+            [dLbl release];
+
+        }
+        return self;
+}
+
+- (CGFloat)preferredHeightForWidth:(CGFloat)arg1
+{
+    return 135.f;
+}
+
 
 @end
 
@@ -652,7 +990,7 @@ int buttonNumber;
             llLbl = [[UILabel alloc] initWithFrame:frame];
             [llLbl setNumberOfLines:1];
             llLbl.font = [UIFont fontWithName:@"HelveticaNeue-Ultralight" size:40];
-            [llLbl setText:@"Support"];
+            [llLbl setText:LOCALIZED_SUPPORT];
             [llLbl setBackgroundColor:[UIColor clearColor]];
             llLbl.textColor = [UIColor blackColor];
             llLbl.textAlignment = NSTextAlignmentCenter;
@@ -660,7 +998,7 @@ int buttonNumber;
             dLbl = [[UILabel alloc] initWithFrame:botFrame];
             [dLbl setNumberOfLines:1];
             dLbl.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:20];
-            [dLbl setText:@"Contact the developers"];
+            [dLbl setText:LOCALIZED_CONTACT_THE_DEVELOPERS];
             [dLbl setBackgroundColor:[UIColor clearColor]];
             dLbl.textColor = [UIColor grayColor];
             dLbl.textAlignment = NSTextAlignmentCenter;

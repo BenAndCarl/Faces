@@ -3,7 +3,7 @@
 //  Faces
 //  Add images to the passcode buttons.
 //  
-//  Created by Ben Rosen and CP Digital Darkroom on 09/06/2014
+//  Created by Ben Rosen and CP Digital Darkrom on 09/06/2014
 //  Copyright (c) 2014, Ben Rosen. All rights reserved.
 //
 
@@ -63,8 +63,8 @@ NSMutableDictionary *prefs = nil;
 				        else 
 				        	imageView.alpha = 0.5;
 				        if (IS_NOT_IPAD) {
-				        	imageView.frame = CGRectMake(0, 0, 73, 73);
-							imageView.center = CGPointMake(47.5, 44.5);
+				        	imageView.frame = CGRectMake(0, 0, 72, 72);
+							imageView.center = CGPointMake(47.5, 44);
 				        } else {
 				        	imageView.frame = CGRectMake(0, 0, 77.5, 77.5);
 							imageView.center = CGPointMake(53, 50.5);

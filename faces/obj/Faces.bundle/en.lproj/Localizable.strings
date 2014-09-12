@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CANCEL</key>
+	   <string>Cancel</string>
+
+	<key>CHOOSE_IMAGES</key>
+	   <string>Choose Images</string>
+
+	<key>CHOOSE_PHOTO</key>
+	   <string>Choose an Existing Photo</string>
+
+	<key>CONTACT_THE_DEVELOPERS</key>
+	   <string>Contact the Developers</string>
+
+	<key>CREDITS</key>
+	   <string>Credits</string>
+
+	<key>DELETE_PHOTO</key>
+	   <string>Delete Existing Image</string>
+
+	<key>DONATE</key>
+	   <string>Donate</string>
+
+	<key>DONATE_MESSAGE</key>
+	   <string>We've put a lot of work into this tweak and hope to be able to continue bringing you new exciting tweaks in the future.</string>
+
+	<key>DISMISS</key>
+	   <string>Dismiss</string>
+
+	<key>ENABLED</key>
+	   <string>Enabled</string>
+
+	<key>NO_IMAGE_CURRENTLY_SAVED</key>
+	   <string>You currently don't have an image saved for this button.</string>
+
+	<key>OPACITY</key>
+		<string>Opacity</string>
+
+	<key>PASSCODE_BUTTON_ONE</key>
+	   <string>Passcode Button One</string>
+
+	<key>PASSCODE_BUTTON_TWO</key>
+	   <string>Passcode Button Two</string>
+
+	<key>PASSCODE_BUTTON_THREE</key>
+	   <string>Passcode Button Three</string>
+
+	<key>PASSCODE_BUTTON_FOUR</key>
+	   <string>Passcode Button Four</string>
+
+	<key>PASSCODE_BUTTON_FIVE</key>
+	   <string>Passcode Button Five</string>
+
+	<key>PASSCODE_BUTTON_SIX</key>
+	   <string>Passcode Button Six</string>
+
+	<key>PASSCODE_BUTTON_SEVEN</key>
+	   <string>Passcode Button Seven</string>
+
+	<key>PASSCODE_BUTTON_EIGHT</key>
+	   <string>Passcode Button Eight</string>
+
+	<key>PASSCODE_BUTTON_NINE</key>
+	   <string>Passcode Button Nine</string>
+
+	<key>PASSCODE_BUTTON_ZERO</key>
+	   <string>Passcode Button Zero</string>
+	   
+	<key>RESPRING</key>
+		<string>Respring</string>
+
+	<key>RESPRING_MESSAGE</key>
+		<string>Unfortunately, you need to respring when you change the enable/disable tweak or when you change the opacity of the images. This may be fixed in a future update.</string>
+
+	<key>SELECT_IMAGES_FOR_BUTTONS</key>
+	   <string>Select the images for the buttons</string>
+
+	<key>SUPPORT</key>
+	   <string>Support</string>
+
+    <key>TAKE_OR_CHOOSE</key>
+       <string>Do you want to take a photo or choose an existing photo?</string>
+
+	<key>TAKE_PHOTO</key>
+	   <string>Take a Photo</string>
+</dict>
+</plist>

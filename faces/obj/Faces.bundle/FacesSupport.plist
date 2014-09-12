@@ -42,6 +42,14 @@
 			<key>action</key>
 			<string>emailBR</string>
 		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Email CP Digital Darkroom</string>
+			<key>action</key>
+			<string>emailCP</string>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>Support</string>
